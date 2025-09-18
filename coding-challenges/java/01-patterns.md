@@ -132,3 +132,63 @@ public class Test {
 ```
 
 ## Triangle Patterns
+
+**Pattern - 1 (r=5)**
+
+```text
+*
+* *
+* * *
+* * * *
+* * * * *
+```
+
+```java
+public class Test {
+
+    public static void printPattern(int rows) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        printPattern(5);
+    }
+}
+```
+
+**Pattern - 2 (r=5)**
+
+```text
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+```
+
+```java
+public class Test {
+
+    public static void printPattern(int rows) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < rows - i - 1; j++) {
+                System.out.print("  ");
+            }
+
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        printPattern(5);
+    }
+}
+```
